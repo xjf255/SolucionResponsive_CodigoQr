@@ -1,0 +1,74 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
+}
+*{
+    font-family: 'Outfit';
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+.all{
+    max-width: 375px;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-gray); 
+}
+#qr{
+    width: 88%;
+    height: 66%;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 16px;
+}
+#qr_img{
+    width: 90%;
+    height: 65%;
+    margin-top: 14px;
+    border: 1px solid var(--Grayish-blue);
+    border-radius: 8px;
+    overflow: hidden;
+}
+#qr_img  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#qr_description{
+    height: 30%;
+    margin: 16px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#qr_description > h1{
+    font-weight: 700;
+    color: var(--Dark-blue);
+}
+#qr_description > p{
+    color: var(--Grayish-blue);
+    font-weight: 400;
+    font-size: 15px;
+}
+@media (width >= 375px) {
+    .all{
+        min-width: 100vw;
+        height: 100vh;
+    }
+    #qr{
+        max-width: 370px;
+        height: 60%;
+    }
+    #qr_img{
+        height: 70%;
+    }
+}
